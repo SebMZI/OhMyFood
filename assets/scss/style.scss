@@ -31,14 +31,17 @@ body{
     align-items: center;
     animation: loader 3s linear;
     opacity: 0;
+    z-index: 1000;
 
     .loader__dot{
         content: "";
         position: relative;
+        top: 0;
+        left: 0;
         z-index: 1000;
         width: 40px;
         height: 40px;
-        margin: 10px 10px;
+        margin: 0 10px;
         border-radius: 50%;
         background-color: #FFF;
         animation: loader__dots 3s linear ;
@@ -72,7 +75,7 @@ body{
     }
 
     98%{
-        opacity: 0.25;
+        opacity: 0.35;
     }
 
 
@@ -112,13 +115,13 @@ body{
     }
 
     98%{
-        opacity: 0.25;
+        opacity: 0.35;
     }
 
     100%{
         opacity: 0;
         transform: translateY(0);
-
+        display: none;
     }
 
 }
