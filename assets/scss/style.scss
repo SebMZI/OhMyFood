@@ -4,14 +4,29 @@
     margin: 0;
 }
 
+// Variables
+
+$primary: #9356DC;
+$secondary: #FF79DA;
+$tertiary: #99E2D0;
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Shrikhand', cursive;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+///////////////////////////// Loader Page CSS /////////////////////////////
+
 .loader{
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(#9356DC, #FF79DA);
+    background: linear-gradient(to left, $primary, $secondary);
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: loader 3s;
+    animation: loader 3s linear;
     opacity: 0;
 
     .loader__dot{
@@ -20,34 +35,52 @@
         z-index: 1000;
         width: 40px;
         height: 40px;
-        margin: 0px 10px;
+        margin: 10px 10px;
         border-radius: 50%;
-        background-color: white;
-        animation: loader__dots 1.5s ;
+        background-color: #FFF;
+        animation: loader__dots 3s linear ;
     }
 
     .loader__dot:nth-child(2){
-        animation-delay: 0.15s;
+        animation-delay: 0.3s;
     }
     .loader__dot:nth-child(3){
-        animation-delay: 0.25s;
+        animation-delay: 0.6s;
     }
 
 }
+
+// Animation Loader background //
 
 @keyframes loader {
     0%{
         opacity: 1;
     }
 
-    50%{
-        opacity: 0.5;
+    80%{
+        opacity: 1;
     }
+
+    
+
+    94%{
+        opacity: 0.5;
+        
+    }
+
+    98%{
+        opacity: 0.25;
+    }
+
 
     100%{
         opacity: 0;
+        display: none;
+
     }
 }
+
+// Animation Loader dots //
 
 @keyframes loader__dots {
     0%{
@@ -56,28 +89,37 @@
     }
 
     25%{
-        transform: translateY(-10px);
+        opacity: 1;
+        transform: translateY(-20px);
     }
 
     50%{
-       
+        opacity: 1;
         transform: translateY(0);
     }
 
     75%{
-        opacity: 0.35;
-        transform: translateY(-10px);
+        opacity: 1;
+        transform: translateY(-20px);
+    }
 
+    94%{
+        opacity: 0.5;
+        
+    }
+
+    98%{
+        opacity: 0.25;
     }
 
     100%{
         opacity: 0;
-        transform: translateY(0px);
+        transform: translateY(0);
+
     }
 
 }
 
 
-body{
-}
+////////// Oh My Food /////////////
 
