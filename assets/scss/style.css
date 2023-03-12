@@ -2,6 +2,7 @@
 ::before, ::after {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -37,13 +38,13 @@ body {
   margin: 0 10px;
   border-radius: 50%;
   background-color: #FFF;
-  animation: loader__dots 3s linear;
+  animation: loader__dots 0.4s infinite alternate;
 }
 .loader .loader__dot:nth-child(2) {
-  animation-delay: 0.3s;
+  animation-delay: 0.1s;
 }
 .loader .loader__dot:nth-child(3) {
-  animation-delay: 0.6s;
+  animation-delay: 0.2s;
 }
 
 @keyframes loader {
@@ -65,31 +66,7 @@ body {
   }
 }
 @keyframes loader__dots {
-  0% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  25% {
-    opacity: 1;
-    transform: translateY(-20px);
-  }
-  50% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  75% {
-    opacity: 1;
-    transform: translateY(-20px);
-  }
-  94% {
-    opacity: 0.5;
-  }
-  98% {
-    opacity: 0.35;
-  }
   100% {
-    opacity: 0;
-    transform: translateY(0);
-    display: none;
+    transform: translateY(-25px);
   }
 }/*# sourceMappingURL=style.css.map */
