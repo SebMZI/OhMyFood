@@ -1,1 +1,85 @@
+@import "../utils/variables";
+@import "../utils/mixins";
 @import "../layout/header";
+@import "../composants/button";
+
+.main-section{
+    @include flex-column; 
+    justify-content: space-around;
+    align-items: center;
+    padding: 39px 30px;
+    background-color: #F7F7F7;
+    text-align: center;
+    gap: 27px;
+    width: 100%;
+    .main-content{
+        @include flex-column;
+        text-align: center;
+        gap: 10px;
+        .main-text__title{
+            padding: 0px 20px;
+            font-weight: 700;
+        }
+        .main-text__txt{
+            font-weight: 300;
+            font-size: 18px;
+            color: #353535;
+            ;
+        }
+    }
+    .button{
+        @include button;
+        a{
+            color: #FFF;
+        }
+    }
+}
+
+.fonctionnement{
+    padding: 48px 20px;
+    max-width: 1440px;
+    @include flex-column;
+    .fonctionnement__title{
+        margin-bottom: 26px;
+    }
+    .fonctionnement-content{
+        @include flex-column;
+        gap: 25px;
+        padding: 0px 12px;
+        counter-reset: counter;
+        .fonctionnement-content__list{
+            @include flex-row;
+            @include center;
+            width: 322.49px;
+            height: 72.38px;
+            border-radius: 20px;
+            background-color: #F6F6F6;
+            position: relative;
+            &::before{
+                counter-increment: counter 1;
+                content: counter(counter);
+                position: absolute;
+                left: -10px;
+                height: 24px;
+                width: 24px;
+                background-color: $primary;
+                color: #fff;
+                border-radius: 50%;
+                display: flex;
+                @include center;
+            }
+            i{
+                position: relative;
+                left: -27px;
+            }
+            &:hover{
+                background: #F5EDFF;
+                box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+                i{
+                    color: $primary;
+                }
+            }
+        }
+
+    }
+}
