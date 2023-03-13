@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2a4ae6f608.js" crossorigin="anonymous"></script>
     <title>OhMyFood</title>
 </head>
 <body>
@@ -16,19 +17,46 @@
         <div class="loader__dot"></div>
         <div class="loader__dot"></div>
         <div class="loader__dot"></div>
-    </div>
-    
-    <h1>Welcome to Oh My Food</h1>
-    <p>l'endroit du délice</p>
-
-    <div class="container">
-        <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
+    </div> 
+    <!-- Header -->
+    <header class="header">
+        <img class="header__img" src="assets/images/logo/ohmyfood.png" alt="Logo noir de OhMyFood">
+    </header>
+    <div class="location">
+        <i class="fa-solid fa-location-dot location__icon"></i>
+        <p class="location__text">Paris, Belleville</p>
     </div>
 
-    
+    <!-- Main -->
+    <main>
+        <!-- Main Section -->
+        <section class="main-section">
+            <div class="main-text">
+                <h1 class="main-text__title">Réservez le menu qui vous convient</h1>
+                <p class="main-text__txt">Découvrez des restaurants d'exception</p>
+            </div>
+            <button class="main-section__button button"><a href="#">Explorer nos restaurants</a></button>
+        </section>
+
+        <!-- Fonctionnement -->
+        <section class="fonctionnement">
+            <h2 class="fonctionnement__title">Fonctionnement</h2>
+            <ul>
+                <li>
+                    <i class="fa-solid fa-mobile-screen-button "></i>
+                    <p>Choisissez un restaurant</p>  
+                </li>
+                <li>
+                    <i class="fa-solid fa-list-ul"></i>
+                    <p>Composez votre menu</p>
+                </li>
+                <li>
+                    <i class="fa-sharp fa-solid fa-store"></i>
+                    <p>Dégustez au restaurant</p>
+                </li>
+            </ul>
+        </section>
+    </main>
+
 </body> 
 </html>
