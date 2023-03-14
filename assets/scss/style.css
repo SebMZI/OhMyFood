@@ -255,6 +255,7 @@ li {
 }
 .restaurants .cards .cards__card .card__content .card__title {
   padding-bottom: 5px;
+  font-weight: 700;
 }
 .restaurants .cards .cards__card .hearts {
   position: relative;
