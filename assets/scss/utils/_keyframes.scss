@@ -1,0 +1,54 @@
+
+// Animation Loader background //
+
+@keyframes loader {
+    0%{
+        opacity: 1;
+    }
+
+    80%{
+        opacity: 1;
+    }
+
+    
+
+    94%{
+        opacity: 0.5;
+        
+    }
+
+    98%{
+        opacity: 0.35;
+    }
+
+
+    100%{
+        opacity: 0;
+        display: none;
+
+    }
+}
+
+// Animation Loader dots //
+
+@keyframes loader__dots {
+    100%{
+        transform: translateY(-25px);
+
+    }
+
+}
+
+// Animation Coeurs
+
+@keyframes coeur {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}

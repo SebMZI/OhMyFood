@@ -1,0 +1,32 @@
+.footer{
+    @include flex-column;
+    justify-content: space-between;
+    gap: 14px;
+    background-color: #353535;
+    padding: 22px 20px 33px 20px;
+    .footer__title{
+        font-family: 'Shrikhand';
+        font-weight: 400;
+        font-size: 18px;
+        color: #FFF;
+    }
+    .footer__content{
+        @include flex-column;
+        gap: 10px;
+        .footer__list{
+            .footer__link{
+                @include flex-row;
+                justify-content: flex-start;
+                gap: 11px;
+                color: #FFF;
+                .footer__icon{
+                    width: 11px;
+                    height: 13px;
+                }
+                p{
+                    padding-left: 10px;
+                }
+            }            
+        }
+    }
+}
