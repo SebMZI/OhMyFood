@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/scss/style.css">
+    <link rel="stylesheet" href="../assets/scss/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
@@ -12,6 +12,50 @@
     <title>OhMyFood - La Palette du goût</title>
 </head>
 <body>
-    
+    <header class="header">
+        <div class="header-logo">
+            <img class="header__img" src="../assets/images/logo/ohmyfood.png" alt="Logo noir de OhMyFood">
+        </div>
+        <a class="header-back" href="../index.html"><i class="fa-solid fa-arrow-left"></i></a>      
+    </header>
+
+    <main class="main-container">
+        <img class="background__img" src="../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Image d'un plat du restaurant La Palette du goût">
+        <section class="rest-entree">
+            <div class="rest-header">
+                <h1 class="rest-title">La palette du goût</h1>
+                <div class="hearts">
+                    <img class="empty-heart" src="../assets/images/heart.svg" alt="coeur vide">
+                    <img class="filled-heart" src="../assets/images/filled-heart.svg" alt="coeur remplit">
+                </div>
+            </div>
+            
+        </section>
+    </main>
+
+
+    <footer class="footer">
+        <h2 class="footer__title">ohmyfood</h2>
+        <ul class="footer__content">
+            <li class="footer__list">
+                <a class="footer__link" href="#">
+                    <i class="fa-solid fa-utensils footer__icon"></i>
+                    <p>Proposer un restaurant</p>
+                </a>                
+            </li>
+            <li class="footer__list">
+                <a class="footer__link" href="#">
+                    <i class="fa-sharp fa-solid fa-handshake footer__icon"></i>
+                    <p>Devenir partenaire</p>
+                </a>                
+            </li>
+            <li class="footer__list">
+                <a class="footer__link" href="#">Mentions légales</a>
+            </li>
+            <li class="footer__list">
+                <a class="footer__link" href="#">Contact</a>
+            </li>
+        </ul>
+    </footer>
 </body>
 </html>

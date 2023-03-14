@@ -60,8 +60,8 @@ li {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background: linear-gradient(to top, #9356DC, #FF79DA);
   display: flex;
   justify-content: center;
@@ -96,14 +96,15 @@ li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
-.header .header__logo {
+.header .header-logo {
   width: 100%;
   text-align: center;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   z-index: 1;
 }
-.header .header__logo .header__img {
+.header .header-logo .header__img {
   width: 162px;
   padding: 14px 0 8px 0;
 }
@@ -119,6 +120,13 @@ li {
 .header .header__location .location__icon {
   position: relative;
   right: 18px;
+}
+.header .header-back {
+  position: absolute;
+  left: 23px;
+  color: #000;
+  font-size: 17px;
+  z-index: 2;
 }
 
 .footer {
@@ -153,37 +161,6 @@ li {
 }
 .footer .footer__content .footer__list .footer__link p {
   padding-left: 10px;
-}
-
-.header {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.header .header__logo {
-  width: 100%;
-  text-align: center;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-  z-index: 1;
-}
-.header .header__logo .header__img {
-  width: 162px;
-  padding: 14px 0 8px 0;
-}
-.header .header__location {
-  width: 100%;
-  height: 50px;
-  background-color: #EAEAEA;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-.header .header__location .location__icon {
-  position: relative;
-  right: 18px;
 }
 
 .main-section {
@@ -349,4 +326,47 @@ li {
   padding: 7px 10px;
   border-radius: 2px;
   z-index: 2;
+}
+
+.background__img {
+  width: 100%;
+}
+
+.rest-entree {
+  height: 100%;
+  background-color: #F6F6F6;
+  position: relative;
+  top: -50px;
+  z-index: 2;
+  border-radius: 40px 40px 0px 0px;
+}
+.rest-entree .rest-header {
+  padding: 32px 17px;
+}
+.rest-entree .rest-header .rest-title {
+  font-family: "Shrikhand";
+}
+.rest-entree .rest-header .hearts {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.rest-entree .rest-header .hearts .empty-heart {
+  position: absolute;
+  right: 25px;
+  top: -31px;
+  visibility: visible;
+}
+.rest-entree .rest-header .hearts .filled-heart {
+  visibility: hidden;
+  position: absolute;
+  right: 25px;
+  top: -31px;
+}
+.rest-entree .rest-header .hearts:hover .empty-heart {
+  visibility: hidden;
+}
+.rest-entree .rest-header .hearts:hover .filled-heart {
+  visibility: visible;
+  animation: coeur 0.7s linear;
 }/*# sourceMappingURL=style.css.map */

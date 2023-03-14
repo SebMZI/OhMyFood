@@ -4,7 +4,8 @@
     width: 100%;
     @include flex-column;
     @include center;
-    .header__logo{
+    position: relative;
+    .header-logo{
         width: 100%;
         text-align: center;
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
@@ -24,6 +25,13 @@
             position: relative;
             right: 18px;
         }
+    }
+    .header-back{
+        position: absolute;
+        left: 23px;
+        color: #000;
+        font-size: 17px;
+        z-index: 2;
     }
 }
 
