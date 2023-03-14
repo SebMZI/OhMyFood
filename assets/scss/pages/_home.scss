@@ -28,10 +28,10 @@
     }
     .button{
         @include button;
-        a{
-            color: #FFF;
-        }
+        color: #FFF;
     }
+
+    
 }
 
 .fonctionnement{
@@ -70,6 +70,7 @@
             i{
                 position: relative;
                 left: -27px;
+                color: #7E7E7E;
             }
             &:hover{
                 background: #F5EDFF;

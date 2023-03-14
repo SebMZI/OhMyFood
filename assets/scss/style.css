@@ -1,5 +1,4 @@
-*,
-::before, ::after {
+*, ::before, ::after {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -219,12 +218,10 @@ li {
   border-radius: 25px;
   border: none;
   padding: 15px 20px;
+  color: #FFF;
 }
 .main-section .button:hover {
   opacity: 0.9;
-}
-.main-section .button a {
-  color: #FFF;
 }
 
 .fonctionnement {
@@ -271,6 +268,7 @@ li {
 .fonctionnement .fonctionnement-content .fonctionnement-content__list i {
   position: relative;
   left: -27px;
+  color: #7E7E7E;
 }
 .fonctionnement .fonctionnement-content .fonctionnement-content__list:hover {
   background: #F5EDFF;
