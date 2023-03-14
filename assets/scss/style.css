@@ -245,6 +245,25 @@ li {
 .restaurants .cards .cards__card .card__content .card__title {
   padding-bottom: 5px;
 }
+.restaurants .cards .cards__card .hearts {
+  position: relative;
+}
+.restaurants .cards .cards__card .hearts .empty-heart {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  visibility: visible;
+}
+.restaurants .cards .cards__card .hearts .filled-heart {
+  visibility: hidden;
+}
+.restaurants .cards .cards__card .hearts:hover .empty-heart {
+  visibility: hidden;
+}
+.restaurants .cards .cards__card .hearts:hover .filled-heart {
+  visibility: visible;
+  animation: coeur 0.7s linear;
+}
 .restaurants .nouveau::after {
   content: "Nouveau";
   position: absolute;
@@ -259,6 +278,17 @@ li {
   z-index: 2;
 }
 
+@keyframes coeur {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .header {
   width: 100%;
   display: flex;

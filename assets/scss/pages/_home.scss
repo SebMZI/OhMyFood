@@ -117,11 +117,45 @@
                 .card__title{
                     padding-bottom: 5px;
                 }
+            }
+            .hearts{
+                position: relative;
+                .empty-heart{
+                    position: absolute;
+                    right: 0px;
+                    top: 0px;
+                    visibility: visible;
+                }
+                .filled-heart{
+                    visibility: hidden;
+                }
+                &:hover{
+                    .empty-heart{
+                        visibility: hidden;
+                    }
+                    .filled-heart{
+                        visibility: visible;
+                        animation: coeur .7s linear;
+                    }
+                }
             }    
         }
     }
     
     .nouveau::after{
         @include nouveau;
+    }
+}
+
+
+@keyframes coeur {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
     }
 }
