@@ -35,7 +35,7 @@
 }
 
 .fonctionnement{
-    padding: 48px 20px;
+    padding: 48px 25px;
     max-width: 1440px;
     @include flex-column;
     .fonctionnement__title{
@@ -90,45 +90,43 @@
         padding-bottom: 25px;
     }
     .cards{
-       @include flex-column; 
-       gap: 20px;
+        @include flex-column;
+        gap: 20px;
         .cards__card{
-            height: 251px;
-            width: 100%;
-            border-radius: 15px;
-            background-color: #FFF;
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-            position: relative; 
-            @include flex-column;
-            .card__img{
+            position: relative;
+            .card__link{
                 width: 100%;
-                height: 100%;
+                height: 251px;
+                @include flex-column;
+                border-radius: 15px;
                 overflow: hidden;
-                border-top-right-radius: 15px;
-                border-top-left-radius: 15px;
-                object-fit: cover;
-            
-            } 
-            .card__content{
-                @include flex-row;
-                justify-content: space-between;
-                align-items: center;
-                padding: 12px 25px 12px 13px;
-                .card__title{
-                    padding-bottom: 5px;
-                    font-weight: 700;
+                box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+                .card__img{
+                    height: 70%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+                .card__txt{
+                    color: #000;
+                    padding: 14px 13px;
+                    .card__title{
+                        padding-bottom: 5px;
+                    }
                 }
             }
             .hearts{
                 position: relative;
                 .empty-heart{
                     position: absolute;
-                    right: 0px;
-                    top: 0px;
+                    right: 25px;
+                    top: -50px;
                     visibility: visible;
                 }
                 .filled-heart{
                     visibility: hidden;
+                    position: absolute;
+                    right: 25px;
+                    top: -50px;
                 }
                 &:hover{
                     .empty-heart{
@@ -139,9 +137,13 @@
                         animation: coeur .7s linear;
                     }
                 }
-            }    
+            }                   
         }
     }
+
+
+
+    
     
     .nouveau::after{
         @include nouveau;

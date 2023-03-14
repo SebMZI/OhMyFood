@@ -3,14 +3,15 @@
 @import "./utils/variables";
 @import "./utils/mixins";
 @import "./utils/keyframes";
+
 @import "./composants/button";
 @import "./composants/nouveau";
 
 
 @import "./layout/loader";
+@import "./layout/header";
+@import "./layout/footer";
 
 @import "./pages/home";
 @import "./pages/restaurants";
 
-@import "./layout/header";
-@import "./layout/footer"
