@@ -49,6 +49,7 @@
             height: 72.38px;
             border-radius: 20px;
             background-color: #F6F6F6;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
             position: relative;
             &::before{
                 counter-increment: counter 1;
@@ -65,7 +66,7 @@
             }
             i{
                 position: relative;
-                left: -27px;
+                right: 23px;
                 color: #7E7E7E;
             }
             &:hover{

@@ -26,12 +26,6 @@ li {
   0% {
     opacity: 1;
   }
-  80% {
-    opacity: 1;
-  }
-  94% {
-    opacity: 0.5;
-  }
   98% {
     opacity: 0.35;
   }
@@ -57,17 +51,14 @@ li {
   }
 }
 .loader {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
   background: linear-gradient(to top, #9356DC, #FF79DA);
   display: flex;
   justify-content: center;
   align-items: center;
   animation: loader 3s linear;
-  opacity: 0;
   z-index: 1000;
 }
 .loader .loader__dot {
@@ -194,7 +185,11 @@ li {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 25px;
   border: none;
-  padding: 15px 20px;
+  width: 186px;
+  height: 50px;
+  color: #FFF;
+}
+.main-section .button a {
   color: #FFF;
 }
 .main-section .button:hover {
@@ -226,6 +221,7 @@ li {
   height: 72.38px;
   border-radius: 20px;
   background-color: #F6F6F6;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   position: relative;
 }
 .fonctionnement .fonctionnement-content .fonctionnement-content__list::before {
@@ -244,7 +240,7 @@ li {
 }
 .fonctionnement .fonctionnement-content .fonctionnement-content__list i {
   position: relative;
-  left: -27px;
+  right: 23px;
   color: #7E7E7E;
 }
 .fonctionnement .fonctionnement-content .fonctionnement-content__list:hover {
@@ -330,43 +326,125 @@ li {
 
 .background__img {
   width: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 55px;
 }
 
-.rest-entree {
-  height: 100%;
+.rest-header {
+  margin-top: 200px;
   background-color: #F6F6F6;
-  position: relative;
-  top: -50px;
-  z-index: 2;
   border-radius: 40px 40px 0px 0px;
+  padding: 32px 0px 32px 13px;
 }
-.rest-entree .rest-header {
-  padding: 32px 17px;
-}
-.rest-entree .rest-header .rest-title {
+.rest-header .rest-title {
   font-family: "Shrikhand";
+  font-size: 28px;
+  font-weight: 400;
 }
-.rest-entree .rest-header .hearts {
+.rest-header .hearts {
   width: 100%;
   height: 100%;
   position: relative;
 }
-.rest-entree .rest-header .hearts .empty-heart {
+.rest-header .hearts .empty-heart {
   position: absolute;
-  right: 25px;
-  top: -31px;
+  right: 35px;
+  top: -32px;
   visibility: visible;
 }
-.rest-entree .rest-header .hearts .filled-heart {
+.rest-header .hearts .filled-heart {
   visibility: hidden;
   position: absolute;
-  right: 25px;
+  right: 35px;
   top: -31px;
 }
-.rest-entree .rest-header .hearts:hover .empty-heart {
+.rest-header .hearts:hover .empty-heart {
   visibility: hidden;
 }
-.rest-entree .rest-header .hearts:hover .filled-heart {
+.rest-header .hearts:hover .filled-heart {
   visibility: visible;
   animation: coeur 0.7s linear;
+}
+
+.rest {
+  width: 100%;
+  padding: 0 13px;
+  background-color: hsl(0, 0%, 96%);
+}
+.rest .menu__title {
+  font-size: 16px;
+  font-weight: 300;
+}
+.rest .menu__title .border-title--green {
+  border-bottom: 3px solid #99E2D0;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+.rest .menu-content {
+  padding-top: 12px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.rest .menu-content .plate-card {
+  padding: 12px 18px 12px 11px;
+  border-radius: 15px;
+  border: none;
+  background-color: #FFF;
+  box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.rest .menu-content .plate-card .plate__title {
+  width: 91%;
+  text-align: left;
+  font-weight: 600;
+  font-size: 18px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.rest .menu-content .plate-card .plate-card-content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 15px;
+}
+.rest .menu-content .plate-card .plate-card-content .subtitle {
+  width: 85%;
+  text-align: left;
+  font-weight: 300;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.rest .menu-content .plate-card .plate-card-content .price {
+  width: 35px;
+  font-weight: 700;
+}
+.rest .button-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 40px;
+}
+.rest .button-container .button {
+  background: linear-gradient(to top, #9356DC, #FF79DA);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  border: none;
+  width: 186px;
+  height: 50px;
+}
+.rest .button-container .button a {
+  color: #FFF;
+}
+.rest .button-container .button:hover {
+  opacity: 0.9;
 }/*# sourceMappingURL=style.css.map */
