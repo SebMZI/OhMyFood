@@ -1,6 +1,14 @@
 @import "./base/reset";
 
 @import "./utils/variables";
+@import "./utils/mixins";
+@import "./composants/button";
+@import "./composants/nouveau";
 
 @import "./layout/loader";
+
 @import "./pages/home";
+@import "./pages/restaurants";
+
+@import "./layout/header";
+@import "./layout/footer"

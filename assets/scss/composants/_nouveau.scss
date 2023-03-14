@@ -1,0 +1,13 @@
+@mixin nouveau ($txt-color: #008766, $back-color: $tertiary){
+    content: "Nouveau";
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    text-align: center;
+    font-size: 16px;
+    color: $txt-color;
+    background-color: $back-color;
+    padding: 7px 10px;
+    border-radius: 2px;
+    z-index: 2;
+}
