@@ -30,3 +30,19 @@
         }
     }
 }
+
+@media (min-width: 1024px) {
+    .footer{
+        height: 114px;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 71px;
+        padding-right: 125px;
+        .footer__content{
+            @include flex-row;
+            gap: 40px;
+        }
+    }
+}

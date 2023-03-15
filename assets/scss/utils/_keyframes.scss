@@ -25,16 +25,32 @@
 
 }
 
-// Animation Coeurs
-
-@keyframes coeur {
+@keyframes slideIn{
     0%{
+        transform: translateY(50%);
+        visibility: visible;
         opacity: 0;
     }
-    50%{
-        opacity: 0.5;
+    80%{
+        opacity: 0.75;
     }
     100%{
+        transform: translateY(0);
         opacity: 1;
     }
 }
+
+
+// Animation Coeurs
+
+// @keyframes coeur {
+//     0%{
+//         opacity: 0;
+//     }
+//     50%{
+//         opacity: 0.5;
+//     }
+//     100%{
+//         opacity: 1;
+//     }
+// }

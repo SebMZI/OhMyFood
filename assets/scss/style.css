@@ -39,14 +39,17 @@ li {
     transform: translateY(-25px);
   }
 }
-@keyframes coeur {
+@keyframes slideIn {
   0% {
+    transform: translateY(50%);
+    visibility: visible;
     opacity: 0;
   }
-  50% {
-    opacity: 0.5;
+  80% {
+    opacity: 0.75;
   }
   100% {
+    transform: translateY(0);
     opacity: 1;
   }
 }
@@ -154,6 +157,22 @@ li {
   padding-left: 10px;
 }
 
+@media (min-width: 1024px) {
+  .footer {
+    height: 114px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 71px;
+    padding-right: 125px;
+  }
+  .footer .footer__content {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+  }
+}
 .main-section {
   display: flex;
   flex-direction: column;
@@ -187,13 +206,15 @@ li {
   border: none;
   width: 186px;
   height: 50px;
+  opacity: 1;
+  transition: opacity 400ms ease-in-out;
   color: #FFF;
 }
 .main-section .button a {
   color: #FFF;
 }
 .main-section .button:hover {
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 .fonctionnement {
@@ -217,12 +238,13 @@ li {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 322.49px;
+  width: 100%;
   height: 72.38px;
   border-radius: 20px;
   background-color: #F6F6F6;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   position: relative;
+  transition: background-color 350ms ease-in-out;
 }
 .fonctionnement .fonctionnement-content .fonctionnement-content__list::before {
   counter-increment: counter 1;
@@ -244,7 +266,7 @@ li {
   color: #7E7E7E;
 }
 .fonctionnement .fonctionnement-content .fonctionnement-content__list:hover {
-  background: #F5EDFF;
+  background-color: #F5EDFF;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 }
 .fonctionnement .fonctionnement-content .fonctionnement-content__list:hover i {
@@ -282,6 +304,7 @@ li {
      object-fit: cover;
 }
 .restaurants .cards .cards__card .card__link .card__txt {
+  height: 30%;
   color: #000;
   padding: 14px 13px;
 }
@@ -296,19 +319,26 @@ li {
   right: 25px;
   top: -50px;
   visibility: visible;
+  opacity: 1;
+  transition: visibility 1000ms ease-in-out;
+  transition: opacity 1000ms ease-in-out;
 }
 .restaurants .cards .cards__card .hearts .filled-heart {
   visibility: hidden;
   position: absolute;
   right: 25px;
   top: -50px;
+  opacity: 0;
+  transition: visibility 1000ms ease-in-out;
+  transition: opacity 1000ms ease-in-out;
 }
 .restaurants .cards .cards__card .hearts:hover .empty-heart {
   visibility: hidden;
+  opacity: 0;
 }
 .restaurants .cards .cards__card .hearts:hover .filled-heart {
   visibility: visible;
-  animation: coeur 0.7s linear;
+  opacity: 1;
 }
 .restaurants .nouveau::after {
   content: "Nouveau";
@@ -324,6 +354,51 @@ li {
   z-index: 2;
 }
 
+@media (min-width: 1024px) {
+  .main-section {
+    gap: 30px;
+  }
+  .main-section .main-content {
+    gap: 25px;
+  }
+  .main-section .main-content .main-text__title {
+    font-size: 40px;
+  }
+  .fonctionnement {
+    height: 262px;
+    padding-right: 0;
+    padding-left: 0;
+    width: 100%;
+    margin: auto;
+    max-width: 1024px;
+  }
+  .fonctionnement .fonctionnement-content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: auto;
+    gap: 50px;
+  }
+  .fonctionnement .fonctionnement-content .fonctionnement-content__list {
+    width: 33%;
+  }
+  .restaurants {
+    height: 425px;
+  }
+  .restaurants .restaurants-container {
+    width: 100%;
+    max-width: 1024px;
+    margin: auto;
+  }
+  .restaurants .restaurants-container .cards {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  .restaurants .restaurants-container .cards .cards__card {
+    width: 25%;
+  }
+}
 .background__img {
   width: 100%;
   position: absolute;
@@ -352,19 +427,26 @@ li {
   right: 35px;
   top: -32px;
   visibility: visible;
+  opacity: 1;
+  transition: visibility 1000ms ease-in-out;
+  transition: opacity 1000ms ease-in-out;
 }
 .rest-header .hearts .filled-heart {
   visibility: hidden;
   position: absolute;
   right: 35px;
   top: -31px;
+  opacity: 0;
+  transition: visibility 1000ms ease-in-out;
+  transition: opacity 1000ms ease-in-out;
 }
 .rest-header .hearts:hover .empty-heart {
   visibility: hidden;
+  opacity: 0;
 }
 .rest-header .hearts:hover .filled-heart {
   visibility: visible;
-  animation: coeur 0.7s linear;
+  opacity: 1;
 }
 
 .rest {
@@ -389,17 +471,26 @@ li {
   gap: 15px;
 }
 .rest .menu-content .plate-card {
-  padding: 12px 18px 12px 11px;
   border-radius: 15px;
   border: none;
   background-color: #FFF;
   box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
   display: flex;
+  flex-direction: row;
+  align-items: end;
+  justify-content: space-between;
+  animation: slideIn 1s linear;
+}
+.rest .menu-content .plate-card .plate-card-content {
+  width: 90%;
+  display: flex;
   flex-direction: column;
+  font-size: 15px;
+  padding: 12px 0px 12px 12px;
   gap: 5px;
 }
-.rest .menu-content .plate-card .plate__title {
-  width: 91%;
+.rest .menu-content .plate-card .plate-card-content .plate__title {
+  width: 100%;
   text-align: left;
   font-weight: 600;
   font-size: 18px;
@@ -407,24 +498,61 @@ li {
   overflow: hidden;
   white-space: nowrap;
 }
-.rest .menu-content .plate-card .plate-card-content {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  font-size: 15px;
-}
 .rest .menu-content .plate-card .plate-card-content .subtitle {
-  width: 85%;
+  width: 100%;
   text-align: left;
   font-weight: 300;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
-.rest .menu-content .plate-card .plate-card-content .price {
-  width: 35px;
+.rest .menu-content .plate-card .price {
+  height: 100%;
+  width: 10%;
   font-weight: 700;
+  padding: 12px 15px 12px 0px;
+  transition: width 0.8s ease-in-out;
+}
+.rest .menu-content .plate-card .check-container {
+  background-color: #99E2D0;
+  height: 69px;
+  width: 0%;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: width 0.8s ease-in-out;
+}
+.rest .menu-content .plate-card .check-container .check__icon {
+  color: #FFF;
+  font-size: 18px;
+  visibility: hidden;
+  transform: rotate(0);
+  transition: transform 0.8s ease-in-out;
+}
+.rest .menu-content .plate-card:hover .plate-card-content {
+  width: 70%;
+}
+.rest .menu-content .plate-card:hover .price {
+  width: 15%;
+  padding-left: 10px;
+}
+.rest .menu-content .plate-card:hover .check-container {
+  width: 15%;
+}
+.rest .menu-content .plate-card:hover .check-container .check__icon {
+  visibility: visible;
+  transform: rotate(360deg);
+}
+.rest .menu-content .plate-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.rest .menu-content .plate-card:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.rest .menu-content .plate-card:nth-child(4) {
+  animation-delay: 0.6s;
 }
 .rest .button-container {
   width: 100%;
@@ -441,10 +569,12 @@ li {
   border: none;
   width: 186px;
   height: 50px;
+  opacity: 1;
+  transition: opacity 400ms ease-in-out;
 }
 .rest .button-container .button a {
   color: #FFF;
 }
 .rest .button-container .button:hover {
-  opacity: 0.9;
+  opacity: 0.8;
 }/*# sourceMappingURL=style.css.map */
