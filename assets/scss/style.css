@@ -369,6 +369,12 @@ li {
   visibility: visible;
   opacity: 1;
 }
+.restaurants .cards .cards__card .hearts:active .check-container {
+  width: 59px;
+}
+.restaurants .cards .cards__card .hearts:active .check-container .check__icon {
+  animation: rotationIn 0.4s linear;
+}
 .restaurants .nouveau::after {
   content: "Nouveau";
   position: absolute;
