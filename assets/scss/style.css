@@ -482,7 +482,7 @@ li {
   animation: slideIn 1s linear;
 }
 .rest .menu-content .plate-card .plate-card-content {
-  width: 90%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   font-size: 15px;
@@ -530,9 +530,6 @@ li {
   visibility: hidden;
   transform: rotate(0);
   transition: transform 0.8s ease-in-out;
-}
-.rest .menu-content .plate-card:hover .plate-card-content {
-  width: 70%;
 }
 .rest .menu-content .plate-card:hover .price {
   width: 15%;
@@ -592,6 +589,9 @@ li {
     text-align: center;
   }
   .rest-header .hearts .empty-heart {
+    right: 335px;
+  }
+  .rest-header .hearts .filled-heart {
     right: 335px;
   }
   .rest {
