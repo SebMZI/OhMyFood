@@ -42,13 +42,11 @@
 
 @keyframes rotationIn {
     0%{
-        visibility: hidden;
         transform: rotate(0);
  
     }
     100%{
         transform: rotate(-360deg);
-        visibility: visible;
     }
 }
 
@@ -69,38 +67,3 @@
     }
 }
 
-// @keyframes checkIn {
-//     from{
-//         right: -70px;
-//     }   
-//     to{
-//         right: 0px;
-
-//     }
-// }
-
-@keyframes checkIn {
-    0%{
-        right: -70px;
-        width: 0px;
-    }
-    100%{
-        right: 0;
-        width: 59px;
-    }
-}
-
-
-// Animation Coeurs
-
-// @keyframes coeur {
-//     0%{
-//         opacity: 0;
-//     }
-//     50%{
-//         opacity: 0.5;
-//     }
-//     100%{
-//         opacity: 1;
-//     }
-// }

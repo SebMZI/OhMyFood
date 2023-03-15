@@ -112,22 +112,20 @@
                 padding-top: 25px;
                 border-bottom-right-radius: 15px;
                 border-top-right-radius: 15px;
-                position: relative;
-                right: -70px;
+                transition: width 0.4s ease-in-out;               
                 .check__icon{
                     color: #FFF;
                     font-size: 18px;
-                    visibility: hidden;
-                    animation: rotationOut 1s;
+                    animation: rotationOut 0.4s linear;
+
                 }
             } 
             &:hover{
                 .check-container{
-                    animation: checkIn 1s forwards;
-                    .check__icon{    
-                        visibility: visible;                    
-                        animation: rotationIn .6s linear;                        
-                    }                    
+                    width: 59px;
+                    .check__icon{
+                        animation: rotationIn 0.4s linear;
+                    }                 
                 }
             }     
                     
