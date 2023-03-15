@@ -577,4 +577,27 @@ li {
 }
 .rest .button-container .button:hover {
   opacity: 0.8;
+}
+
+@media (min-width: 1024px) {
+  .background__img {
+    height: 400px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .rest-header {
+    max-width: 1024px;
+    width: 100%;
+    margin: 350px auto 0px auto;
+    text-align: center;
+  }
+  .rest-header .hearts .empty-heart {
+    right: 335px;
+  }
+  .rest {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 210px;
+  }
 }/*# sourceMappingURL=style.css.map */
