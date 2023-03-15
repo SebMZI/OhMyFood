@@ -79,11 +79,13 @@ li {
   }
 }
 @keyframes checkIn {
-  from {
+  0% {
     right: -70px;
+    width: 0px;
   }
-  to {
-    right: 0px;
+  100% {
+    right: 0;
+    width: 59px;
   }
 }
 .loader {
@@ -547,7 +549,7 @@ li {
   margin-left: auto;
   height: 100%;
   font-weight: 700;
-  padding: 12px 10px 12px 10px;
+  padding: 12px 8px 12px 10px;
 }
 .rest .menu-content .plate-card .check-container {
   background-color: #99E2D0;
@@ -556,21 +558,17 @@ li {
   padding-top: 25px;
   border-bottom-right-radius: 15px;
   border-top-right-radius: 15px;
-  visibility: hidden;
   position: relative;
   right: -70px;
-  transition: width 0.4s ease-in-out;
 }
 .rest .menu-content .plate-card .check-container .check__icon {
   color: #FFF;
   font-size: 18px;
   visibility: hidden;
-  animation: rotationOut 1s forwards;
+  animation: rotationOut 1s;
 }
 .rest .menu-content .plate-card:hover .check-container {
-  width: 59px;
-  visibility: visible;
-  animation: checkIn 0.7s both;
+  animation: checkIn 1s forwards;
 }
 .rest .menu-content .plate-card:hover .check-container .check__icon {
   visibility: visible;

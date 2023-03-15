@@ -69,13 +69,24 @@
     }
 }
 
-@keyframes checkIn {
-    from{
-        right: -70px;
-    }   
-    to{
-        right: 0px;
+// @keyframes checkIn {
+//     from{
+//         right: -70px;
+//     }   
+//     to{
+//         right: 0px;
 
+//     }
+// }
+
+@keyframes checkIn {
+    0%{
+        right: -70px;
+        width: 0px;
+    }
+    100%{
+        right: 0;
+        width: 59px;
     }
 }
 

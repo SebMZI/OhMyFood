@@ -72,8 +72,7 @@
             align-items: end;
             justify-content: flex-end;            
             animation: slideIn 1s forwards; 
-            overflow: hidden;  
-             
+            overflow: hidden;              
             .plate-card-content{
                 height: 100%;
                 @include flex-column;                
@@ -104,7 +103,7 @@
                 margin-left: auto;
                 height: 100%;
                 font-weight: 700;
-                padding: 12px 10px 12px 10px;                
+                padding: 12px 8px 12px 10px;               
             }  
             .check-container{                
                 background-color: $tertiary;
@@ -113,28 +112,24 @@
                 padding-top: 25px;
                 border-bottom-right-radius: 15px;
                 border-top-right-radius: 15px;
-                visibility: hidden;
                 position: relative;
                 right: -70px;
-                transition: width .4s ease-in-out;
                 .check__icon{
                     color: #FFF;
                     font-size: 18px;
                     visibility: hidden;
-                    animation: rotationOut 1s forwards;
+                    animation: rotationOut 1s;
                 }
             } 
             &:hover{
                 .check-container{
-                    width: 59px;
-                    visibility: visible;
-                    animation: checkIn .7s both ;
+                    animation: checkIn 1s forwards;
                     .check__icon{    
                         visibility: visible;                    
                         animation: rotationIn .6s linear;                        
                     }                    
                 }
-            }         
+            }     
                     
         }
         
