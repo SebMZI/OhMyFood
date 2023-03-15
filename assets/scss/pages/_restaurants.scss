@@ -63,7 +63,7 @@
         gap: 15px;
         .plate-card{
             width: 100%;
-            padding: auto;
+            height: 59px;
             border-radius: 15px;
             border: none;
             background-color: #FFF;
@@ -77,8 +77,7 @@
                 height: 100%;
                 @include flex-column;                
                 font-size: 15px;  
-                padding: 12px 0px 12px 12px; 
-                gap: 5px;
+                padding: 12px 0px 0px 12px; 
                 text-overflow: ellipsis;
                 overflow: hidden;
                 white-space: nowrap;
@@ -99,17 +98,17 @@
                 }
                 
             } 
-            .price{
+            .price{                
                 margin-left: auto;
                 height: 100%;
                 font-weight: 700;
-                padding: 12px 8px 12px 10px;               
+                padding: 35px 8px 12px 10px;               
             }  
             .check-container{                
                 background-color: $tertiary;
                 height: 67px;
                 width: 0px;
-                padding-top: 25px;
+                padding-top: 28px;
                 border-bottom-right-radius: 15px;
                 border-top-right-radius: 15px;
                 transition: width 0.4s ease-in-out;               
