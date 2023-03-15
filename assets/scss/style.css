@@ -86,14 +86,6 @@ li {
     right: 0px;
   }
 }
-@keyframes checkOut {
-  from {
-    right: 0px;
-  }
-  to {
-    right: -70px;
-  }
-}
 .loader {
   position: fixed;
   width: 100vw;
@@ -567,7 +559,6 @@ li {
   visibility: hidden;
   position: relative;
   right: -70px;
-  animation: checkOut 0.4s linear;
   transition: width 0.4s ease-in-out;
 }
 .rest .menu-content .plate-card .check-container .check__icon {
