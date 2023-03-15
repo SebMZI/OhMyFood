@@ -72,8 +72,10 @@
             align-items: end;
             justify-content: flex-end;            
             animation: slideIn 1s forwards; 
-            overflow: hidden;      
+            overflow: hidden;  
+             
             .plate-card-content{
+                height: 100%;
                 @include flex-column;                
                 font-size: 15px;  
                 padding: 12px 0px 12px 12px; 
@@ -106,7 +108,7 @@
             }  
             .check-container{                
                 background-color: $tertiary;
-                height: 69px;
+                height: 67px;
                 width: 59px;
                 padding-top: 25px;
                 border-bottom-right-radius: 15px;
@@ -114,6 +116,7 @@
                 display: none;
                 position: relative;
                 right: -70px;
+                animation: checkOut .4s linear;
                 .check__icon{
                     color: #FFF;
                     font-size: 18px;
@@ -123,8 +126,8 @@
             } 
             &:hover{
                 .check-container{
-                    right: 0px;
-                    display: inline-block;
+                    display: block;
+                    animation: checkIn .7s both ;
                     .check__icon{    
                         visibility: visible;                    
                         animation: rotationIn .6s linear;                        

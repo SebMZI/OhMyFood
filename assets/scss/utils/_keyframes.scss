@@ -69,7 +69,23 @@
     }
 }
 
+@keyframes checkIn {
+    from{
+        right: -70px;
+    }   
+    to{
+        right: 0px;
 
+    }
+}
+@keyframes checkOut{
+    from{
+        right: 0px;
+    }   
+    to{
+        right: -70px;
+    }
+}
 
 // Animation Coeurs
 
