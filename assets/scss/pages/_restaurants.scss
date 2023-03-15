@@ -109,14 +109,15 @@
             .check-container{                
                 background-color: $tertiary;
                 height: 67px;
-                width: 59px;
+                width: 0px;
                 padding-top: 25px;
                 border-bottom-right-radius: 15px;
                 border-top-right-radius: 15px;
-                display: none;
+                visibility: hidden;
                 position: relative;
                 right: -70px;
                 animation: checkOut .4s linear;
+                transition: width .4s ease-in-out;
                 .check__icon{
                     color: #FFF;
                     font-size: 18px;
@@ -126,7 +127,8 @@
             } 
             &:hover{
                 .check-container{
-                    display: block;
+                    width: 59px;
+                    visibility: visible;
                     animation: checkIn .7s both ;
                     .check__icon{    
                         visibility: visible;                    
