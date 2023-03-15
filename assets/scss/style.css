@@ -26,12 +26,15 @@ li {
   0% {
     opacity: 1;
   }
+  94% {
+    opacity: 1;
+  }
   98% {
-    opacity: 0.35;
+    opacity: 0.5;
   }
   100% {
     opacity: 0;
-    display: none;
+    visibility: hidden;
   }
 }
 @keyframes loader__dots {
@@ -84,7 +87,7 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: loader 3s linear;
+  animation: loader 3s forwards;
   z-index: 1000;
 }
 .loader .loader__dot {

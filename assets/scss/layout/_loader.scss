@@ -6,7 +6,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: loader 3s linear;
+    animation: loader 3s forwards;
     z-index: 1000;
     .loader__dot{
         content: "";
