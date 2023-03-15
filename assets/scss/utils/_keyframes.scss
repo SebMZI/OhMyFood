@@ -40,6 +40,36 @@
     }
 }
 
+@keyframes rotationIn {
+    0%{
+        visibility: hidden;
+        transform: rotate(0);
+ 
+    }
+    100%{
+        transform: rotate(-360deg);
+        visibility: visible;
+    }
+}
+
+@keyframes rotationOut {
+    0%{
+        transform: rotate(-360deg);
+        visibility: visible;
+    }
+    80%{
+        opacity: 0.1;
+    }
+    85%{
+        visibility: hidden;
+    }
+    100%{
+        transform: rotate(0);
+        
+    }
+}
+
+
 
 // Animation Coeurs
 

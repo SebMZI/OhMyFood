@@ -100,7 +100,7 @@
                 width: 10%;
                 font-weight: 700;
                 padding: 12px 15px 12px 0px;  
-                transition: width .8s ease-in-out;
+                transition: width .4s ease-in-out;
             }  
             .check-container{
                 background-color: $tertiary;
@@ -110,13 +110,13 @@
                 border-top-right-radius: 15px;
                 display: flex;
                 @include center;
-                transition: width .8s ease-in-out;
+                transition: width .4s ease-in-out;
                 .check__icon{
                     color: #FFF;
                     font-size: 18px;
                     visibility: hidden;
                     transform: rotate(0);
-                    transition: transform .8s ease-in-out;
+                    animation: rotationOut .4s linear;
                 }
             } 
             &:hover{
@@ -126,10 +126,11 @@
                 }
                 .check-container{
                     width: 15%;
-                    .check__icon{
-                        visibility: visible;
-                        transform: rotate(360deg);
-                    }
+                    .check__icon{    
+                        visibility: visible;                    
+                        animation: rotationIn .4s linear;
+                        
+                    }                    
                 }
             }         
                     
