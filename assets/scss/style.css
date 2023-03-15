@@ -496,6 +496,8 @@ li {
   gap: 15px;
 }
 .rest .menu-content .plate-card {
+  width: 100%;
+  padding: auto;
   border-radius: 15px;
   border: none;
   background-color: #FFF;
@@ -503,19 +505,21 @@ li {
   display: flex;
   flex-direction: row;
   align-items: end;
-  justify-content: space-between;
-  animation: slideIn 1s linear;
+  justify-content: flex-end;
+  animation: slideIn 1s forwards;
+  overflow: hidden;
 }
 .rest .menu-content .plate-card .plate-card-content {
-  width: 100%;
   display: flex;
   flex-direction: column;
   font-size: 15px;
   padding: 12px 0px 12px 12px;
   gap: 5px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .rest .menu-content .plate-card .plate-card-content .plate__title {
-  width: 100%;
   text-align: left;
   font-weight: 600;
   font-size: 18px;
@@ -524,7 +528,6 @@ li {
   white-space: nowrap;
 }
 .rest .menu-content .plate-card .plate-card-content .subtitle {
-  width: 100%;
   text-align: left;
   font-weight: 300;
   text-overflow: ellipsis;
@@ -532,40 +535,35 @@ li {
   white-space: nowrap;
 }
 .rest .menu-content .plate-card .price {
+  margin-left: auto;
   height: 100%;
-  width: 10%;
   font-weight: 700;
-  padding: 12px 15px 12px 0px;
-  transition: width 0.4s ease-in-out;
+  padding: 12px 10px 12px 10px;
 }
 .rest .menu-content .plate-card .check-container {
   background-color: #99E2D0;
   height: 69px;
-  width: 0%;
+  width: 59px;
+  padding-top: 25px;
   border-bottom-right-radius: 15px;
   border-top-right-radius: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: width 0.4s ease-in-out;
+  display: none;
+  position: relative;
+  right: -70px;
 }
 .rest .menu-content .plate-card .check-container .check__icon {
   color: #FFF;
   font-size: 18px;
   visibility: hidden;
-  transform: rotate(0);
-  animation: rotationOut 0.4s linear;
-}
-.rest .menu-content .plate-card:hover .price {
-  width: 15%;
-  padding-left: 10px;
+  animation: rotationOut 1s forwards;
 }
 .rest .menu-content .plate-card:hover .check-container {
-  width: 15%;
+  right: 0px;
+  display: inline-block;
 }
 .rest .menu-content .plate-card:hover .check-container .check__icon {
   visibility: visible;
-  animation: rotationIn 0.4s linear;
+  animation: rotationIn 0.6s linear;
 }
 .rest .menu-content .plate-card:nth-child(2) {
   animation-delay: 0.2s;

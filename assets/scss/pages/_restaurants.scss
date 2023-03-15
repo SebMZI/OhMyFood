@@ -62,74 +62,72 @@
         @include flex-column;
         gap: 15px;
         .plate-card{
+            width: 100%;
+            padding: auto;
             border-radius: 15px;
             border: none;
             background-color: #FFF;
             box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
             @include flex-row;
             align-items: end;
-            justify-content: space-between;            
-            animation: slideIn 1s linear;            
+            justify-content: flex-end;            
+            animation: slideIn 1s forwards; 
+            overflow: hidden;      
             .plate-card-content{
-                width: 100%;
                 @include flex-column;                
                 font-size: 15px;  
                 padding: 12px 0px 12px 12px; 
                 gap: 5px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
                 .plate__title{
-                    width: 100%;
                     text-align: left;
                     font-weight: 600;
-                    font-size: 18px;
+                    font-size: 18px;  
                     text-overflow: ellipsis;
                     overflow: hidden;
-                    white-space: nowrap;
+                    white-space: nowrap;                  
                 }         
                 .subtitle{
-                    width: 100%;
                     text-align: left;
-                    font-weight: 300;
+                    font-weight: 300; 
                     text-overflow: ellipsis;
                     overflow: hidden;
-                    white-space: nowrap;
+                    white-space: nowrap;                       
                 }
                 
             } 
             .price{
+                margin-left: auto;
                 height: 100%;
-                width: 10%;
                 font-weight: 700;
-                padding: 12px 15px 12px 0px;  
-                transition: width .4s ease-in-out;
+                padding: 12px 10px 12px 10px;
             }  
-            .check-container{
+            .check-container{                
                 background-color: $tertiary;
                 height: 69px;
-                width: 0%;
+                width: 59px;
+                padding-top: 25px;
                 border-bottom-right-radius: 15px;
                 border-top-right-radius: 15px;
-                display: flex;
-                @include center;
-                transition: width .4s ease-in-out;
+                display: none;
+                position: relative;
+                right: -70px;
                 .check__icon{
                     color: #FFF;
                     font-size: 18px;
                     visibility: hidden;
-                    transform: rotate(0);
-                    animation: rotationOut .4s linear;
+                    animation: rotationOut 1s forwards;
                 }
             } 
             &:hover{
-                .price{
-                    width: 15%;
-                    padding-left: 10px;                    
-                }
                 .check-container{
-                    width: 15%;
+                    right: 0px;
+                    display: inline-block;
                     .check__icon{    
                         visibility: visible;                    
-                        animation: rotationIn .4s linear;
-                        
+                        animation: rotationIn .6s linear;                        
                     }                    
                 }
             }         
