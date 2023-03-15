@@ -223,14 +223,17 @@ li {
   color: #353535;
 }
 .main-section .button {
+  cursor: pointer;
   background: linear-gradient(to top, #9356DC, #FF79DA);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 25px;
   border: none;
-  width: 186px;
+  width: 218px;
   height: 50px;
   opacity: 1;
   transition: opacity 400ms ease-in-out;
+  text-align: center;
+  padding-top: 15px;
   color: #FFF;
 }
 .main-section .button a {
@@ -543,6 +546,7 @@ li {
   height: 67px;
   width: 0px;
   padding-top: 28px;
+  text-align: center;
   border-bottom-right-radius: 15px;
   border-top-right-radius: 15px;
   transition: width 0.4s ease-in-out;
@@ -576,14 +580,17 @@ li {
   padding-bottom: 40px;
 }
 .rest .button-container .button {
+  cursor: pointer;
   background: linear-gradient(to top, #9356DC, #FF79DA);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 25px;
   border: none;
-  width: 186px;
+  width: 218px;
   height: 50px;
   opacity: 1;
   transition: opacity 400ms ease-in-out;
+  text-align: center;
+  padding-top: 15px;
 }
 .rest .button-container .button a {
   color: #FFF;
