@@ -565,6 +565,12 @@ li {
 .rest .menu-content .plate-card:hover .check-container .check__icon {
   animation: rotationIn 0.4s linear;
 }
+.rest .menu-content .plate-card:active .check-container {
+  width: 59px;
+}
+.rest .menu-content .plate-card:active .check-container .check__icon {
+  animation: rotationIn 0.4s linear;
+}
 .rest .menu-content .plate-card:nth-child(2) {
   animation-delay: 0.2s;
 }

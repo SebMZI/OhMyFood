@@ -127,7 +127,15 @@
                         animation: rotationIn 0.4s linear;
                     }                 
                 }
-            }     
+            }  
+            &:active{
+                .check-container{
+                    width: 59px;
+                    .check__icon{
+                        animation: rotationIn 0.4s linear;
+                    }                 
+                }
+            }   
                     
         }
         
