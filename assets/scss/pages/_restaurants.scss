@@ -163,6 +163,17 @@
     
 }
 
+@media (min-width: 768px){
+    .rest-header{
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+    .rest{
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+}
+
 @media (min-width: 1024px) {
     .background__img{
         height: 400px;        

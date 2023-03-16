@@ -643,6 +643,16 @@ li {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.35);
 }
 
+@media (min-width: 768px) {
+  .rest-header {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+  .rest {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}
 @media (min-width: 1024px) {
   .background__img {
     height: 400px;
