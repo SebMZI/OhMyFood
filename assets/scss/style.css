@@ -394,6 +394,24 @@ li {
   z-index: 2;
 }
 
+@media (min-width: 768px) {
+  .restaurants .restaurants-title {
+    padding-left: 3.5%;
+  }
+  .restaurants .cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .restaurants .cards .cards__card {
+    width: 45%;
+  }
+  .fonctionnement {
+    padding: 48px 125px;
+  }
+}
 @media (min-width: 1024px) {
   .main-section {
     gap: 30px;
@@ -409,8 +427,8 @@ li {
     padding-right: 0;
     padding-left: 0;
     width: 100%;
-    margin: auto;
     max-width: 1024px;
+    margin: auto;
   }
   .fonctionnement .fonctionnement-content {
     display: flex;
@@ -424,19 +442,23 @@ li {
   }
   .restaurants {
     height: 425px;
+    width: 100%;
   }
   .restaurants .restaurants-container {
     width: 100%;
-    max-width: 1024px;
+    max-width: 1440px;
     margin: auto;
   }
+  .restaurants .restaurants-container .restaurants-title {
+    padding-left: 0;
+  }
   .restaurants .restaurants-container .cards {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
+    flex-wrap: nowrap;
+    gap: 15px;
+    width: 100%;
   }
   .restaurants .restaurants-container .cards .cards__card {
-    width: 25%;
+    width: 33%;
   }
 }
 .background__img {
