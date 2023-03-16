@@ -273,7 +273,8 @@ li {
   background-color: #F6F6F6;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   position: relative;
-  transition: background-color 350ms ease-in-out;
+  transition: background-color 0.4s ease-in-out;
+  transition: box-shadow 0.4s ease-in-out;
 }
 .fonctionnement .fonctionnement-content .fonctionnement-content__list::before {
   counter-increment: counter 1;
@@ -296,7 +297,7 @@ li {
 }
 .fonctionnement .fonctionnement-content .fonctionnement-content__list:hover {
   background-color: #F5EDFF;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
 }
 .fonctionnement .fonctionnement-content .fonctionnement-content__list:hover i {
   color: #9356DC;
@@ -349,8 +350,8 @@ li {
   top: -50px;
   visibility: visible;
   opacity: 1;
-  transition: visibility 1000ms ease-in-out;
-  transition: opacity 1000ms ease-in-out;
+  transition: visibility 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
 }
 .restaurants .cards .cards__card .hearts .filled-heart {
   visibility: hidden;
@@ -358,8 +359,8 @@ li {
   right: 25px;
   top: -50px;
   opacity: 0;
-  transition: visibility 1000ms ease-in-out;
-  transition: opacity 1000ms ease-in-out;
+  transition: visibility 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 }
 .restaurants .cards .cards__card .hearts:hover .empty-heart {
   visibility: hidden;
@@ -369,11 +370,13 @@ li {
   visibility: visible;
   opacity: 1;
 }
-.restaurants .cards .cards__card .hearts:active .check-container {
-  width: 59px;
+.restaurants .cards .cards__card .hearts:active .empty-heart {
+  visibility: hidden;
+  opacity: 0;
 }
-.restaurants .cards .cards__card .hearts:active .check-container .check__icon {
-  animation: rotationIn 0.4s linear;
+.restaurants .cards .cards__card .hearts:active .filled-heart {
+  visibility: visible;
+  opacity: 1;
 }
 .restaurants .nouveau::after {
   content: "Nouveau";
