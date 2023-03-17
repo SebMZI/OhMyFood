@@ -44,15 +44,16 @@ li {
 }
 @keyframes slideIn {
   0% {
-    transform: translateY(50%);
-    visibility: visible;
+    transform: translatex(50%);
+    visibility: hidden;
     opacity: 0;
   }
   80% {
     opacity: 0.75;
   }
   100% {
-    transform: translateY(0);
+    visibility: visible;
+    transform: translatex(0);
     opacity: 1;
   }
 }
@@ -543,7 +544,7 @@ li {
   flex-direction: row;
   align-items: end;
   justify-content: flex-end;
-  animation: slideIn 1s forwards;
+  animation: slideIn 2s both;
   overflow: hidden;
 }
 .rest .menu-content .plate-card .plate-card-content {
@@ -605,13 +606,13 @@ li {
   animation: rotationIn 0.4s linear;
 }
 .rest .menu-content .plate-card:nth-child(2) {
-  animation-delay: 0.2s;
+  animation-delay: 0.1s;
 }
 .rest .menu-content .plate-card:nth-child(3) {
-  animation-delay: 0.4s;
+  animation-delay: 0.2s;
 }
 .rest .menu-content .plate-card:nth-child(4) {
-  animation-delay: 0.6s;
+  animation-delay: 0.3s;
 }
 .rest .button-container {
   width: 100%;

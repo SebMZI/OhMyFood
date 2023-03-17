@@ -30,15 +30,17 @@
 
 @keyframes slideIn{
     0%{
-        transform: translateY(50%);
-        visibility: visible;
+        transform: translatex(50%);
+        visibility: hidden;
         opacity: 0;
     }
+
     80%{
         opacity: 0.75;
     }
     100%{
-        transform: translateY(0);
+        visibility: visible;
+        transform: translatex(0);
         opacity: 1;
     }
 }
